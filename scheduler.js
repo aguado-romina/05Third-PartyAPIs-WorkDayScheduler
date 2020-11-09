@@ -42,6 +42,9 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
 
+ let actualTime = moment().format("h:mm:ss a"); 
+ console.log(actualTime);
+
 
 ////to change colors when it's past, present, future///
 
