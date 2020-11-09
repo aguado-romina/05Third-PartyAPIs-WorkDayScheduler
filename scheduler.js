@@ -52,16 +52,20 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
     let presentTime = "present";
     let futureTime = "future";
 
-    let now = document.querySelector(".time");
-    let parsedVar = parseInt(now);
-    console.log(typeof parsedVar);
+    let nineAM = 9;
+    console.log(nineAM);
+    // let hourToNumber = parseInt(hour);
+    console.log(typeof nineAM);
+    // console.log(hourToNumber);
+
+    let timeBlocks = document.querySelector("#hour");
 
  for (let i = 0; i < parsedVariable; i++) {
-    if (parsedVar < parsedVariable) {
-        parsedVar = "present";
-        parsedVariable.setAttribute("class", "past");
+    if (nineAM > parsedVariable) {
+        pastTime = "past";
+        timeBlocks.setAttribute("class", "past");
     }
-
+    console.log(i);
  };
 
 
