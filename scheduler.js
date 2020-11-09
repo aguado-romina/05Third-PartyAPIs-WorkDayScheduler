@@ -31,11 +31,11 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
 
-function changeColor() {  
+    function changeColor() {  
     ///to change colors when it's past, present, future///
- let actualTime = moment().format("H:mm:ss a"); 
+    let actualTime = moment().format("H:mm:ss a"); 
     console.log(actualTime);
- let parsedVariable = parseInt(actualTime);
+    let parsedVariable = parseInt(actualTime);
     console.log(parsedVariable);
     console.log(typeof parsedVariable);
 
@@ -55,14 +55,10 @@ function changeColor() {
     let nineNumber = parseInt(nineSplit[1]);
     console.log(nineNumber);
 
-
-    console.log(nineNumber > parsedVariable);
+    
+    //console.log(nineNumber > parsedVariable);
    
-    if (nineNumber < parsedVariable) {
-        pastTime = "past";
-        nineNumber.setAttribute("class", "past");
-    }
-};
+ 
 //  for (let i = 0; i < parsedVariable; i++) {
 //     if (nineNumber < parsedVariable) {
         
