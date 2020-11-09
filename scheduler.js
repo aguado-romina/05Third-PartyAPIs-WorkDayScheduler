@@ -1,14 +1,5 @@
-//GIVEN I am using a daily planner to create a schedule
-
-
-
-// THEN each time block is color-coded to indicate whether it is in the past, present, or future
-
-
-
-
 //////// to Display date in jumbotron /////
-console.log(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+//console.log(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
@@ -40,8 +31,8 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
 
-
-///to change colors when it's past, present, future///
+function changeColor() {  
+    ///to change colors when it's past, present, future///
  let actualTime = moment().format("H:mm:ss a"); 
     console.log(actualTime);
  let parsedVariable = parseInt(actualTime);
@@ -52,6 +43,7 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
     let presentTime = "present";
     let futureTime = "future";
 
+    
     let now = document.querySelector(".time");
     let parsedVar = parseInt(now);
     console.log(typeof parsedVar);
@@ -63,22 +55,23 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
     let nineNumber = parseInt(nineSplit[1]);
     console.log(nineNumber);
 
-//     let nineAM = 9;
-//     console.log(nineAM);
-//     // let hourToNumber = parseInt(hour);
-//     console.log(typeof nineAM);
-//     // console.log(hourToNumber);
 
-console.log(nineNumber > parsedVariable);
-
+    console.log(nineNumber > parsedVariable);
+   
+    if (nineNumber < parsedVariable) {
+        pastTime = "past";
+        nineNumber.setAttribute("class", "past");
+    }
+};
 //  for (let i = 0; i < parsedVariable; i++) {
 //     if (nineNumber < parsedVariable) {
         
-//         let timeBlocks = document.querySelector("#hour-9");
-//         timeBlocks.attr("class", "past");
+//         pastTime = "past";
+//         pastTime.attr("class", "past");
 //     }
 //     console.log(i);
 //  };
+
 
 
 // themeSwitcher.addEventListener("click", function() {
