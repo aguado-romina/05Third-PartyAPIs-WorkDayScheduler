@@ -42,7 +42,7 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
 ///to change colors when it's past, present, future///
- let actualTime = moment().format("h:mm:ss a"); 
+ let actualTime = moment().format("H:mm:ss a"); 
     console.log(actualTime);
  let parsedVariable = parseInt(actualTime);
     console.log(parsedVariable);
@@ -52,21 +52,33 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
     let presentTime = "present";
     let futureTime = "future";
 
-    let nineAM = 9;
-    console.log(nineAM);
-    // let hourToNumber = parseInt(hour);
-    console.log(typeof nineAM);
-    // console.log(hourToNumber);
+    let now = document.querySelector(".time");
+    let parsedVar = parseInt(now);
+    console.log(typeof parsedVar);
 
-    let timeBlocks = document.querySelector("#hour");
+    let nineAM = "#hour-9";
+    let nineSplit = nineAM.split("-");
+    console.log(nineSplit);
 
- for (let i = 0; i < parsedVariable; i++) {
-    if (nineAM > parsedVariable) {
-        pastTime = "past";
-        timeBlocks.setAttribute("class", "past");
-    }
-    console.log(i);
- };
+    let nineNumber = parseInt(nineSplit[1]);
+    console.log(nineNumber);
+
+//     let nineAM = 9;
+//     console.log(nineAM);
+//     // let hourToNumber = parseInt(hour);
+//     console.log(typeof nineAM);
+//     // console.log(hourToNumber);
+
+console.log(nineNumber > parsedVariable);
+
+//  for (let i = 0; i < parsedVariable; i++) {
+//     if (nineNumber < parsedVariable) {
+        
+//         let timeBlocks = document.querySelector("#hour-9");
+//         timeBlocks.attr("class", "past");
+//     }
+//     console.log(i);
+//  };
 
 
 // themeSwitcher.addEventListener("click", function() {
