@@ -41,16 +41,29 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
 
-
+///to change colors when it's past, present, future///
  let actualTime = moment().format("h:mm:ss a"); 
- console.log(actualTime);
+    console.log(actualTime);
+ let parsedVariable = parseInt(actualTime);
+    console.log(parsedVariable);
+    console.log(typeof parsedVariable);
 
+    let pastTime = "past";
+    let presentTime = "present";
+    let futureTime = "future";
 
-////to change colors when it's past, present, future///
+    let now = document.querySelector(".time");
+    let parsedVar = parseInt(now);
+    console.log(typeof parsedVar);
 
-// var themeSwitcher = document.querySelector("#theme-switcher");
-// var container = document.querySelector(".container");
-// var mode = "dark";
+ for (let i = 0; i < parsedVariable; i++) {
+    if (parsedVar < parsedVariable) {
+        parsedVar = "present";
+        parsedVariable.setAttribute("class", "past");
+    }
+
+ };
+
 
 // themeSwitcher.addEventListener("click", function() {
 //   if (mode === "dark") {
